@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Jack Kelly: Energy Disaggregation</title>
+
+    <meta name="author" content="Jack Kelly">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="bower_components/reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="bower_components/reveal.js/css/theme/black.css" id="theme">
+    <link rel="stylesheet" href="css/jack.css">
+    
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'bower_components/reveal.js/css/print/pdf.css' : 'bower_components/reveal.js/css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="bower_components/reveal.js/lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="reveal">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <section data-background-video="images/shutterstock_v1102696_chimneys.m4v"
+                 data-background-video-loop
+                 data-background-video-muted>
+          <!--"images/chimneys.jpg"> -->
+          <div style="background-color: rgba(0, 0, 0, 0.5); padding:
+                 10px; width: 100%; margin-top: 200px;">
+          <h3>Energy Disaggregation</h3>
+          <p>
+            <small>
+              <a href="http://jack-kelly.com">Jack Kelly</a><br/>
+              jack.kelly@imperial.ac.uk<br/>
+              <br/>
+
+            </small>
+          </p>
+          </div>
+
+          <p class="tiny" style="margin-top: 200px; background-color:rgba(0, 0, 0, 0.5);">
+            Background video
+            by <a href="https://www.shutterstock.com/video/clip-1102696-stock-footage-tube-with-smoke-at-winter-sunset.html">Guryanov
+            Andrey / shutterstock</a>
+          </p>                    
+        </section>
+
+      
+      <!-- Any section element inside of this container is displayed as a slide -->
+<!--      <div class="slides">
+        <section>
+          <h1>Energy Disaggregation</h1>
+          <p>
+            <small>
+              <a href="http://jack-kelly.com">Jack Kelly</a><br/>
+              jack.kelly@imperial.ac.uk<br/>
+          </small></p>
+        </section>
+-->
+        <section>
+          <h1>Outline</h1>
+          <ol>
+            <li class="fragment">What is Energy Disaggregation?</li>
+            <li class="fragment">My PhD work</li>
+            <li class="fragment">Plans for a NILM competition</li>
+          </ol>          
+        </section>
+
+        <section>
+          <h3>What is Energy Disaggregation?</h3>
+        </section>
+
+        <section>
+          <h3>Aggregate Energy Bill</h3>
+          <img src="images/top_5_energy_aggregate.png">
+        </section>
+        
+        <section>
+          <h3>Itemised Energy Bill</h3>
+          <img src="images/top_5_energy.png">
+        </section>
+
+        <section>
+          <img src="images/area_plot_agg.png" >
+        </section>
+
+        <section>
+          <img src="images/area_plot_fridge.png">
+        </section>
+
+        <section>
+          <img src="images/area_plot_htpc.png">
+        </section>
+
+        <section>
+          <img src="images/area_plot_others.png">
+        </section>
+
+        <section>
+          <img src="images/area_plot_dish_washer.png">
+        </section>
+
+        <section>
+          <img src="images/area_plot_washer_dryer.png">
+        </section>
+
+        <section>
+          <img src="images/area_plot_kettle.png">
+        </section>
+
+        <section>
+          <h1>My PhD Work</h1>
+          <ul>
+            <li>First to apply deep neural nets to energy disaggregation</li>
+            <li class="fragment">A lead developer on open source disaggregation
+              tool NILMTK</li>
+            <li class="fragment">Disaggregated energy dataset: UK-DALE</li>
+            <li class="fragment">NILM Metadata: 
+              <ul><li class="fragment">Used by > 9 datasets</li></ul></li>
+            <li class="fragment">Systematic review: Does disaggregated electricity
+            feedback reduce domestic electricity consumption?</li>
+          </ul>
+        </section>
+
+        <section id="rnns-for-nilm">
+          <h1>Recurrent Neural Nets</h1>
+          <p class="placeholder"></p>
+          <span class="fragment"></span>
+          <span class="fragment"></span>
+          <span class="fragment"></span>
+          <span class="fragment"></span>          
+          <!-- 
+          ***** D3 (low priority) ******
+          Highlight the connections as data flows through, especially
+          RNN connections.
+          -->
+        </section>
+
+
+        <!-- ******************************************************
+                                   RESULTS
+        ******************************************************** -->
+
+        <section>
+          <h3>Example Output from Deep Neural Net</h3>
+          <div style="height: 600px; width: 1000px;">
+            <!--
+            <div class="fragment current-visible" style="position:absolute;">
+              <p>LSTM</p>
+              <object data="images/net_output_LSTM.svg"
+                      type="image/svg+xml" width=1000></object>              
+            </div>
+            -->
+            
+            <div class="fragment current-visible" style="position:absolute;">
+              <p>Autoencoder</p>
+              <object data="images/net_output_AE.svg"
+                      type="image/svg+xml" width=1000></object>              
+            </div>
+
+            <!--
+            <div class="fragment current-visible" style="position:absolute;">
+              <p>Rectangles</p>
+              <object data="images/net_output_rectangles.svg"
+                      type="image/svg+xml" width=1000></object>              
+            </div>            
+            -->
+          </div>
+        </section>
+
+                
+        <section>
+          <div style="height: 600px; width: 1000px;">
+            <div style="position:absolute;">
+              <p class="tiny"
+                 style="position:absolute; transform: translate(0, 0);">
+                Metrics on Unseen Appliances
+              </p>
+              <object data="images/unseen_houses.svg"
+                      type="image/svg+xml"
+                      style="transform: translate(50%, 0);"
+                      width=600></object>              
+            </div>
+          </div>
+        </section>
+
+        
+        <!--
+        <section>          
+          <object data="images/net_output_no_overlap.svg"
+                  type="image/svg+xml" width=1000></object>              
+        </section>
+        -->
+
+
+        <!-- ******************************************************
+                                   PLANS
+        ******************************************************** -->
+        
+        <section>
+          <h1>Plans for a NILM algorithm competition</h1>
+        </section>
+
+        <section>
+          <h3>Why we need a NILM competition</h3>
+          <ul>
+            <li class="fragment">Currently impossible to compare NILM
+              algorithms
+              <ul>
+                <li class="fragment">Different datasets, metrics, 
+                  pre-processing, appliances etc.</li>
+                <li class="fragment">Hence no way to measure progress or
+                  select best algos</li>
+              </ul>
+            </li>
+            <li class="fragment">Competitions work for other machine learning fields</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Work plan</h3>
+          <img src="images/EDFworkplan.png"/>
+          
+        </section>
+
+        <!-- TODO: include content from my work plan that I sent to
+        EDF -->
+        
+        <section>
+          <h1>Questions?</h1>
+          <small>jack.kelly@imperial.ac.uk</small>
+        </section>
+
+        
+        <section>
+          <h1>Deep Neural Nets</h1>
+        </section>
+
+        <section>
+          <p><strong>ImageNet</strong> Large Scale Visual Recognition
+          Challenge (ILSVRC)</p>
+          <img src="images/imagenet.png" height=550>
+          <p class="tiny">From: Krizhevsky, Sutskever &amp;
+          Hinton. <a href="http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks">ImageNet Classification with Deep
+            Convolutional Neural Networks</a>.  NIPS (2012)
+            </p>
+        </section>
+        
+        <section>
+          <img src="images/imagenetResults.png" width="90%">
+          <p class="tiny">Image from <a href="http://devblogs.nvidia.com/parallelforall/mocha-jl-deep-learning-julia/">devblogs.nvidia.com</a></p>
+        </section>        
+
+        <section>
+          <p><strong>Krizhevsky <em>et al.</em>'s DNN Results on ImageNet 2012</strong></p>
+          <img src="images/krizhevskyResults.png" height=550>
+          <p class="tiny">Krizhevsky, Sutskever &amp;
+          Hinton. <a href="http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks">ImageNet Classification with Deep
+            Convolutional Neural Networks</a>.  NIPS (2012)
+            </p>
+        </section>
+
+
+        <!-- ******************************************************
+                           Three DNN ARCHITECTURES FOR NILM
+        ******************************************************** -->
+
+        <section id="autoencoder-for-nilm">
+          <h1>Denoising Autoencoders</h1>
+          <p class="placeholder"></p>
+          <span class="fragment"></span>
+          <span class="fragment"></span>          
+          <span class="fragment"></span>
+          <!-- 
+          ***** D3 (low priority) ******
+          Highlight the connections as data flows through.
+          -->
+        </section>
+
+        <section id="rectangles-for-nilm">
+          <h1>Bounding Rectangle</h1>
+          <p class="placeholder"></p>
+          <span class="fragment"></span>
+          <span class="fragment"></span>
+          <span class="fragment"></span>          
+          <!-- 
+          ***** D3 (low priority) ******
+          Highlight the connections as data flows through.
+          -->
+        </section>
+
+
+        <section>
+          <h3>Example Output from Deep Neural Net</h3>
+          <div style="height: 600px; width: 1000px;">
+
+            <div class="fragment current-visible" style="position:absolute;">
+              <p>LSTM</p>
+              <object data="images/net_output_LSTM.svg"
+                      type="image/svg+xml" width=1000></object>              
+            </div>
+
+            
+            <div class="fragment current-visible" style="position:absolute;">
+              <p>Autoencoder</p>
+              <object data="images/net_output_AE.svg"
+                      type="image/svg+xml" width=1000></object>              
+            </div>
+
+
+            <div class="fragment current-visible" style="position:absolute;">
+              <p>Rectangles</p>
+              <object data="images/net_output_rectangles.svg"
+                      type="image/svg+xml" width=1000></object>              
+            </div>            
+
+          </div>
+        </section>
+
+
+        <section>          
+          <object data="images/net_output_no_overlap.svg"
+                  type="image/svg+xml" width=1000></object>              
+        </section>
+
+        
+        
+      </div>
+
+    </div>
+
+    <!-- REVEAL -->
+    <script src="bower_components/reveal.js/lib/js/head.min.js"></script>
+    <script src="bower_components/reveal.js/js/reveal.js"></script>
+
+    <!-- D3 -->
+    <script src="bower_components/d3/d3.js"></script>
+
+    <!-- REVEAL TO D3 -->
+    <script src="js/reveal-to-d3-config.js"></script>
+    <script src="js/reveal-to-d3.js"></script>
+    <script src="js/d3-common.js"></script>    
+    <script src="js/d3-plot-power-data.js"></script>
+    <script src="js/d3-plot-neural-nets.js"></script>    
+    
+    <!-- REVEAL INIT -->
+    <script src="js/reveal-init.js"></script>
+
+    <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-29040208-8', 'auto');
+      ga('send', 'pageview');
+
+      // From https://github.com/hakimel/reveal.js/issues/211#issuecomment-60726240
+      Reveal.addEventListener("slidechanged",function(event){
+
+        ga('send', 'pageview', {
+          'page': event.indexh,
+          'title': document.title + ' : Slide ' + event.indexh
+        });
+
+      });
+    </script>
+    
+  </body>
+</html>
